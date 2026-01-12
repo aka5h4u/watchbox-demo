@@ -165,11 +165,11 @@
   <!-- Hero Slider -->
   <div class="hero">
     <div class="slides">
+      <div class="slide" style="background-image:url('./images/banner.png')"></div>
       <div class="slide" style="background-image:url('./images/banner1.png')"></div>
       <div class="slide" style="background-image:url('./images/banner2.png')"></div>
       <div class="slide" style="background-image:url('./images/banner3.png')"></div>
       <div class="slide" style="background-image:url('./images/banner4.png')"></div>
-      <div class="slide" style="background-image:url('./images/banner5.png')"></div>
     </div>
 
     <div class="overlay">
