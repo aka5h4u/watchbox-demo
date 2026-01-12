@@ -38,10 +38,12 @@
 
     /* Hero Banner Rotation */
     .hero {
-      position: relative;
-      height: 80vh;
-      overflow: hidden;
-    }
+  position: relative;
+  width: 100vw;          /* FORCE full viewport width */
+  height: 80vh;
+  overflow: hidden;
+  margin-left: calc(-50vw + 50%); /* prevents body padding issues */
+}
 
     .slides {
       height: 100%;
