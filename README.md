@@ -176,6 +176,26 @@
       • Smart escalation to sales or service
     </div>
   </section>
+  <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00Dfj00000GhufN',
+				'Github_Messaging_Setting',
+				'https://orgfarm-23fcbe497c-dev-ed.develop.my.site.com/ESWGithubMessagingSetti1768249695612',
+				{
+					scrt2URL: 'https://orgfarm-23fcbe497c-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-23fcbe497c-dev-ed.develop.my.site.com/ESWGithubMessagingSetti1768249695612/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 
   <!-- Footer -->
   <footer>
@@ -193,6 +213,7 @@
       slides[currentSlide].classList.add("active");
     }, 5000);
   </script>
+  
 
 </body>
 </html>
