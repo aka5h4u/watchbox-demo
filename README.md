@@ -176,6 +176,22 @@
       • Smart escalation to sales or service
     </div>
   </section>
+  <!-- Footer -->
+  <footer>
+    © 2026 Demo Luxury Company. All rights reserved.
+  </footer>
+
+  <!-- Banner Rotation Script -->
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove("active");
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add("active");
+    }, 5000);
+  </script>
   <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
@@ -193,27 +209,9 @@
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
-</script>
-<script type='text/javascript' src='https://orgfarm-23fcbe497c-dev-ed.develop.my.site.com/ESWGithubMessagingSetti1768249695612/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+	</script>
+	<script type='text/javascript' src='https://orgfarm-23fcbe497c-dev-ed.develop.my.site.com/ESWGithubMessagingSetti1768249695612/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
-
-  <!-- Footer -->
-  <footer>
-    © 2026 Demo Luxury Company. All rights reserved.
-  </footer>
-
-  <!-- Banner Rotation Script -->
-  <script>
-    const slides = document.querySelectorAll(".slide");
-    let currentSlide = 0;
-
-    setInterval(() => {
-      slides[currentSlide].classList.remove("active");
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add("active");
-    }, 5000);
-  </script>
-  
 
 </body>
 </html>
