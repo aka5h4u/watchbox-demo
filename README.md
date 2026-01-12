@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -5,129 +6,110 @@
   <title>Luxury Watches & Jewelry | Demo</title>
 
   <style>
-    :root {
-      --black: #0b0b0b;
-      --gold: #c9a24d;
-      --muted: #b0b0b0;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: "Helvetica Neue", Arial, sans-serif;
-      background: var(--black);
-      color: #fff;
+      background: #0b0b0b;
+      color: #ffffff;
     }
 
-    /* Header */
     header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 20px 40px;
-      border-bottom: 1px solid #1f1f1f;
+      border-bottom: 1px solid #222;
       background: #000;
     }
 
-    .logo img {
+    header img {
       height: 40px;
     }
 
     nav a {
-      color: var(--muted);
+      color: #b0b0b0;
       text-decoration: none;
-      margin-left: 24px;
-      font-size: 0.95rem;
+      margin-left: 20px;
+      font-size: 14px;
     }
 
     nav a:hover {
-      color: var(--gold);
+      color: #ffffff;
     }
 
-    /* Hero Slider */
+    /* Hero Banner Rotation */
     .hero {
       position: relative;
-      height: 85vh;
+      height: 80vh;
       overflow: hidden;
     }
 
     .slides {
-      display: flex;
       height: 100%;
-      width: 500%;
-      animation: slide 30s infinite;
+      width: 100%;
+      position: relative;
     }
 
     .slide {
-      width: 100%;
-      flex-shrink: 0;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
       display: flex;
       align-items: center;
       padding-left: 80px;
     }
 
-    .overlay-content h1 {
-      font-size: 3rem;
+    .hero-content h1 {
+      font-size: 48px;
       font-weight: 300;
       margin-bottom: 20px;
     }
 
-    .overlay-content button {
-      background: #fff;
+    .hero-content button {
+      padding: 14px 30px;
       border: none;
-      padding: 14px 28px;
-      font-size: 0.9rem;
+      background: #ffffff;
+      color: #000;
+      font-size: 12px;
       letter-spacing: 1px;
       cursor: pointer;
       border-radius: 30px;
     }
 
-    /* Slider animation */
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      20% { transform: translateX(0); }
-      25% { transform: translateX(-100%); }
-      40% { transform: translateX(-100%); }
-      45% { transform: translateX(-200%); }
-      60% { transform: translateX(-200%); }
-      65% { transform: translateX(-300%); }
-      80% { transform: translateX(-300%); }
-      85% { transform: translateX(-400%); }
-      100% { transform: translateX(-400%); }
-    }
-
-    /* AI Section */
     section {
       padding: 80px 40px;
       text-align: center;
     }
 
-    .agent-box {
+    .agent-demo {
       max-width: 700px;
       margin: auto;
-      border: 2px dashed var(--gold);
+      border: 2px dashed #c9a24d;
       padding: 40px;
       margin-top: 30px;
       border-radius: 6px;
-      font-size: 0.95rem;
+      color: #c9a24d;
+      font-size: 14px;
     }
 
     footer {
       padding: 40px;
       text-align: center;
-      color: var(--muted);
-      border-top: 1px solid #1f1f1f;
+      border-top: 1px solid #222;
+      color: #888;
     }
 
     @media (max-width: 768px) {
@@ -135,12 +117,12 @@
         display: none;
       }
 
-      .overlay {
+      .hero-overlay {
         padding-left: 30px;
       }
 
-      .overlay-content h1 {
-        font-size: 2rem;
+      .hero-content h1 {
+        font-size: 32px;
       }
     }
   </style>
@@ -150,9 +132,7 @@
 
   <!-- Header -->
   <header>
-    <div class="logo">
-      <img src="./logo.png" alt="Logo">
-    </div>
+    <img src="logo.png" alt="Brand Logo" />
     <nav>
       <a href="#">Watches</a>
       <a href="#">Jewelry</a>
@@ -162,44 +142,56 @@
     </nav>
   </header>
 
-  <!-- Hero Slider -->
+  <!-- Hero with Rotating Banners -->
   <div class="hero">
     <div class="slides">
-      <div class="slide" style="background-image:url('./images/banner.png')"></div>
-      <div class="slide" style="background-image:url('./images/banner1.png')"></div>
-      <div class="slide" style="background-image:url('./images/banner2.png')"></div>
-      <div class="slide" style="background-image:url('./images/banner3.png')"></div>
-      <div class="slide" style="background-image:url('./images/banner4.png')"></div>
+      <div class="slide active" style="background-image: url('banner.png')"></div>
+      <div class="slide" style="background-image: url('banner1.png')"></div>
+      <div class="slide" style="background-image: url('banner2.png')"></div>
+      <div class="slide" style="background-image: url('banner3.png')"></div>
+      <div class="slide" style="background-image: url('banner4.png')"></div>
     </div>
 
-    <div class="overlay">
-      <div class="overlay-content">
-        <h1>Enduring Icons of Luxury</h1>
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Timeless Icons of Luxury</h1>
         <button>EXPLORE COLLECTION</button>
       </div>
     </div>
   </div>
 
-  <!-- Agentforce Demo -->
+  <!-- Agentforce Demo Section -->
   <section>
     <h2>Ask Our Watch Advisor</h2>
     <p>
-      AI-powered assistance for both collectors and partners — grounded in
-      verified product and authentication knowledge.
+      AI-powered guidance for collectors and partners — grounded in trusted
+      product and authentication knowledge.
     </p>
 
-    <div class="agent-box">
-      🤖 Agentforce Web Agent Demo Zone<br><br>
-      • Answers from Salesforce Knowledge<br>
+    <div class="agent-demo">
+      🤖 Agentforce Web Agent Demo Area<br><br>
+      • Salesforce Knowledge grounded answers<br>
       • B2C & B2B ready<br>
-      • Seamless escalation to experts
+      • Smart escalation to sales or service
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    &copy; 2026 Demo Luxury Company. All rights reserved.
+    © 2026 Demo Luxury Company. All rights reserved.
   </footer>
+
+  <!-- Banner Rotation Script -->
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove("active");
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add("active");
+    }, 5000);
+  </script>
 
 </body>
 </html>
