@@ -170,7 +170,7 @@
     </p>
 
     <div class="agent-demo">
-      🤖 Agentforce Web Agent Demo Area<br><br>
+      🤖 Agentforce Web Agent Demo Area [13/01/2026]<br><br>
       • Salesforce Knowledge grounded answers<br>
       • B2C & B2B ready<br>
       • Smart escalation to sales or service
