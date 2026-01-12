@@ -129,7 +129,7 @@
 
 <body>
 
-  <!-- Header -->
+  <!-- Header  -->
   <header>
     <img src="logo.png" alt="Brand Logo" />
     <nav>
