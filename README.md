@@ -29,7 +29,7 @@
       color: #b0b0b0;
       text-decoration: none;
       margin-left: 20px;
-      font-size: 14px;
+      font-size: 14px; 
     }
 
     nav a:hover {
