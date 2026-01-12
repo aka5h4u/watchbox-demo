@@ -151,7 +151,7 @@
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="./watchbox-demo/images/logo.png" alt="Logo">
+      <img src="./logo.png" alt="Logo">
     </div>
     <nav>
       <a href="#">Watches</a>
