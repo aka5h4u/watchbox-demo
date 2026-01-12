@@ -7,8 +7,6 @@
   <style>
     :root {
       --black: #0b0b0b;
-      --dark: #121212;
-      --light: #f5f5f5;
       --gold: #c9a24d;
       --muted: #b0b0b0;
     }
@@ -21,29 +19,27 @@
       margin: 0;
       font-family: "Helvetica Neue", Arial, sans-serif;
       background: var(--black);
-      color: #ffffff;
-      line-height: 1.6;
+      color: #fff;
     }
 
     /* Header */
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 24px 48px;
+      justify-content: space-between;
+      padding: 20px 40px;
       border-bottom: 1px solid #1f1f1f;
+      background: #000;
     }
 
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 500;
-      letter-spacing: 1px;
+    .logo img {
+      height: 40px;
     }
 
     nav a {
       color: var(--muted);
       text-decoration: none;
-      margin-left: 28px;
+      margin-left: 24px;
       font-size: 0.95rem;
     }
 
@@ -51,128 +47,100 @@
       color: var(--gold);
     }
 
-    /* Hero */
+    /* Hero Slider */
     .hero {
-      padding: 110px 40px;
-      text-align: center;
-      background: linear-gradient(to bottom, #151515, #0b0b0b);
+      position: relative;
+      height: 85vh;
+      overflow: hidden;
     }
 
-    .hero h1 {
+    .slides {
+      display: flex;
+      height: 100%;
+      width: 500%;
+      animation: slide 30s infinite;
+    }
+
+    .slide {
+      width: 100%;
+      flex-shrink: 0;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+      display: flex;
+      align-items: center;
+      padding-left: 80px;
+    }
+
+    .overlay-content h1 {
       font-size: 3rem;
       font-weight: 300;
       margin-bottom: 20px;
     }
 
-    .hero p {
-      max-width: 720px;
-      margin: auto;
-      font-size: 1.1rem;
-      color: var(--muted);
+    .overlay-content button {
+      background: #fff;
+      border: none;
+      padding: 14px 28px;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      border-radius: 30px;
     }
 
-    /* Sections */
+    /* Slider animation */
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      20% { transform: translateX(0); }
+      25% { transform: translateX(-100%); }
+      40% { transform: translateX(-100%); }
+      45% { transform: translateX(-200%); }
+      60% { transform: translateX(-200%); }
+      65% { transform: translateX(-300%); }
+      80% { transform: translateX(-300%); }
+      85% { transform: translateX(-400%); }
+      100% { transform: translateX(-400%); }
+    }
+
+    /* AI Section */
     section {
       padding: 80px 40px;
-    }
-
-    section.light {
-      background: var(--light);
-      color: #111;
-    }
-
-    h2 {
       text-align: center;
-      font-weight: 400;
-      font-size: 2rem;
-      margin-bottom: 48px;
-    }
-
-    /* Cards */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 32px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .card {
-      border: 1px solid #222;
-      padding: 36px 28px;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .light .card {
-      border-color: #ddd;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: var(--gold);
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      font-weight: 500;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .light .card p {
-      color: #444;
-    }
-
-    /* AI Demo */
-    .ai-demo {
-      max-width: 820px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .ai-demo p {
-      color: var(--muted);
-      margin-bottom: 28px;
     }
 
     .agent-box {
+      max-width: 700px;
+      margin: auto;
       border: 2px dashed var(--gold);
-      padding: 44px;
+      padding: 40px;
+      margin-top: 30px;
       border-radius: 6px;
       font-size: 0.95rem;
     }
 
-    /* Footer */
     footer {
-      padding: 48px;
+      padding: 40px;
       text-align: center;
+      color: var(--muted);
       border-top: 1px solid #1f1f1f;
-      color: var(--muted);
-      font-size: 0.85rem;
     }
 
-    footer a {
-      color: var(--muted);
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    footer a:hover {
-      color: var(--gold);
-    }
-
-    /* Mobile */
     @media (max-width: 768px) {
       nav {
         display: none;
       }
 
-      .hero h1 {
-        font-size: 2.2rem;
+      .overlay {
+        padding-left: 30px;
+      }
+
+      .overlay-content h1 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -182,7 +150,9 @@
 
   <!-- Header -->
   <header>
-    <div class="logo">Demo Luxury</div>
+    <div class="logo">
+      <img src="./images/logo.png" alt="Logo">
+    </div>
     <nav>
       <a href="#">Watches</a>
       <a href="#">Jewelry</a>
@@ -192,62 +162,43 @@
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Slider -->
   <div class="hero">
-    <h1>Exceptional Watches & Fine Jewelry</h1>
-    <p>
-      Curated luxury timepieces and jewelry trusted by collectors,
-      enthusiasts, and global partners.
-    </p>
+    <div class="slides">
+      <div class="slide" style="background-image:url('./images/banner1.png')"></div>
+      <div class="slide" style="background-image:url('./images/banner2.png')"></div>
+      <div class="slide" style="background-image:url('./images/banner3.png')"></div>
+      <div class="slide" style="background-image:url('./images/banner4.png')"></div>
+      <div class="slide" style="background-image:url('./images/banner5.png')"></div>
+    </div>
+
+    <div class="overlay">
+      <div class="overlay-content">
+        <h1>Enduring Icons of Luxury</h1>
+        <button>EXPLORE COLLECTION</button>
+      </div>
+    </div>
   </div>
 
-  <!-- Brands -->
-  <section>
-    <h2>Featured Brands</h2>
-    <div class="grid">
-      <div class="card"><h3>Rolex</h3><p>Iconic precision and heritage</p></div>
-      <div class="card"><h3>Patek Philippe</h3><p>Generational craftsmanship</p></div>
-      <div class="card"><h3>Cartier</h3><p>Timeless elegance</p></div>
-      <div class="card"><h3>Omega</h3><p>Innovation and legacy</p></div>
-    </div>
-  </section>
-
-  <!-- Collections -->
-  <section class="light">
-    <h2>Our Collections</h2>
-    <div class="grid">
-      <div class="card"><h3>New Arrivals</h3><p>Latest acquisitions</p></div>
-      <div class="card"><h3>Pre-Owned Watches</h3><p>Certified and authenticated</p></div>
-      <div class="card"><h3>Fine Jewelry</h3><p>Exceptional craftsmanship</p></div>
-      <div class="card"><h3>Sell & Trade</h3><p>Trusted global marketplace</p></div>
-    </div>
-  </section>
-
-  <!-- AI Agent Demo -->
+  <!-- Agentforce Demo -->
   <section>
     <h2>Ask Our Watch Advisor</h2>
-    <div class="ai-demo">
-      <p>
-        Our AI-powered advisor assists both consumers and partners
-        with product knowledge, authentication, and buying guidance — 24/7.
-      </p>
+    <p>
+      AI-powered assistance for both collectors and partners — grounded in
+      verified product and authentication knowledge.
+    </p>
 
-      <div class="agent-box">
-        🤖 Agentforce Web Agent Demo Zone<br/><br/>
-        • Answers from verified Salesforce Knowledge<br/>
-        • Supports B2C & B2B inquiries<br/>
-        • Seamless escalation to human experts
-      </div>
+    <div class="agent-box">
+      🤖 Agentforce Web Agent Demo Zone<br><br>
+      • Answers from Salesforce Knowledge<br>
+      • B2C & B2B ready<br>
+      • Seamless escalation to experts
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Demo Luxury Company. All rights reserved.</p>
-    <p>
-      <a href="#">Privacy</a> |
-      <a href="#">Terms</a>
-    </p>
+    &copy; 2026 Demo Luxury Company. All rights reserved.
   </footer>
 
 </body>
