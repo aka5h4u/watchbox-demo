@@ -35,6 +35,11 @@
     nav a:hover {
       color: #ffffff;
     }
+	  .category-section {
+  padding: 80px 40px;
+  background: #111; /* slightly lighter than body */
+  border: 2px solid red; /* DEBUG BORDER */
+}
 
     /* Hero Banner Rotation */
     .hero {
