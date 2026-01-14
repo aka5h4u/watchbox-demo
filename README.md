@@ -165,14 +165,14 @@
   <div class="category-grid">
 
     <div class="category-card">
-      <img src="couples.png" alt="Couples Collection">
+      <img src="Couples.png" alt="Couples Collection">
       <div class="category-overlay">
         <h3>Couples</h3>
       </div>
     </div>
 
     <div class="category-card">
-      <img src="gifts.png" alt="Gifts Collection">
+      <img src="Gifts.png" alt="Gifts Collection">
       <div class="category-overlay">
         <h3>Gifts</h3>
       </div>
