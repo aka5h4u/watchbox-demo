@@ -191,7 +191,7 @@
   <section>
     <h2>Ask Our Watch Advisor - Watchie From The 1916 Company</h2>
 	  <div class="category-card">
-	  <img src="Watchie.png" alt="Powered By AI">
+	  <img src="watchie.png" alt="Powered By AI">
 	 <div class="category-overlay">
         <h3>Powered by AI</h3>
       </div>
@@ -201,7 +201,7 @@
     </p>
 
     <div class="agent-demo">
-      Watchie From The 1916 Company<br><br>
+      Watchie From The 1916 Company<br>
       • Salesforce Knowledge grounded answers<br>
       • B2C & B2B ready<br>
       • Smart escalation to sales or service
