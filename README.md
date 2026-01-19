@@ -165,7 +165,7 @@
       </div>
     </div>
   </div>
-  </br>
+  <br>
   <!-- Couples & Gifts Section -->
 <section class="category-section">
   <div class="category-grid">
@@ -190,13 +190,18 @@
   <!-- Agentforce Demo Section -->
   <section>
     <h2>Ask Our Watch Advisor - Watchie From The 1916 Company</h2>
+	  <div class="category-card">
 	  <img src="Watchie.png" alt="Powered By AI">
+	 <div class="category-overlay">
+        <h3>Powered by AI</h3>
+      </div>
+    </div>
     <p>
       AI-powered guidance for collectors and partners, grounded in trusted product and authentication knowledge.
     </p>
 
     <div class="agent-demo">
-      🤖 Agentforce Web Agent Demo Area [13/01/2026]<br><br>
+      Watchie From The 1916 Company<br><br>
       • Salesforce Knowledge grounded answers<br>
       • B2C & B2B ready<br>
       • Smart escalation to sales or service
