@@ -190,12 +190,10 @@
   <!-- Agentforce Demo Section -->
   <section>
     <h2>Ask Our Watch Advisor - Watchie From The 1916 Company</h2>
-	  <div class="category-card">
+	 
 	  <img src="watchie.png" alt="Powered By AI">
-	 <div class="category-overlay">
         <h3>Powered by AI</h3>
-      </div>
-    </div>
+		<br>
     <p>
       AI-powered guidance for collectors and partners, grounded in trusted product and authentication knowledge.
     </p>
