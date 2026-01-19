@@ -157,7 +157,7 @@
       <div class="slide" style="background-image: url('Banner7.png')"></div>
       <div class="slide" style="background-image: url('Banner8.png')"></div>
     </div>
-
+	
     <div class="hero-overlay">
       <div class="hero-content">
         <h1>Timeless Icons of Luxury</h1>
@@ -165,6 +165,7 @@
       </div>
     </div>
   </div>
+  </br>
   <!-- Couples & Gifts Section -->
 <section class="category-section">
   <div class="category-grid">
@@ -188,10 +189,10 @@
 
   <!-- Agentforce Demo Section -->
   <section>
-    <h2>Ask Our Watch Advisor</h2>
+    <h2>Ask Our Watch Advisor - Watchie From The 1916 Company</h2>
+	  <img src="Watchie.png" alt="Powered By AI">
     <p>
-      AI-powered guidance for collectors and partners — grounded in trusted
-      product and authentication knowledge.
+      AI-powered guidance for collectors and partners, grounded in trusted product and authentication knowledge.
     </p>
 
     <div class="agent-demo">
