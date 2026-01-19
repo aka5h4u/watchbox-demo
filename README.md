@@ -191,7 +191,7 @@
   <section>
     <h2>Ask Our Watch Advisor - Watchie From The 1916 Company</h2>
 	 
-	  <img src="watchie.png" alt="Powered By AI">
+	  <img src="watchie1.png" alt="Powered By AI">
         <h3>Powered by AI</h3>
 		<br>
     <p>
