@@ -152,10 +152,10 @@
   <div class="hero">
     <div class="slides">
       <div class="slide active" style="background-image: url('banner.png')"></div>
-      <div class="slide" style="background-image: url('banner1.png')"></div>
-      <div class="slide" style="background-image: url('banner2.png')"></div>
-      <div class="slide" style="background-image: url('banner3.png')"></div>
-      <div class="slide" style="background-image: url('banner4.png')"></div>
+      <div class="slide" style="background-image: url('Banner6.png')"></div>
+      <div class="slide" style="background-image: url('Banner5.png')"></div>
+      <div class="slide" style="background-image: url('Banner7.png')"></div>
+      <div class="slide" style="background-image: url('Banner8.png')"></div>
     </div>
 
     <div class="hero-overlay">
